@@ -1,0 +1,120 @@
+/**
+ *页面注册
+ */
+import {Navigation} from 'react-native-navigation';
+
+import MapPane from './component/mapPane.js';
+import ImageGallery from './component/imageGallery';
+import InfoDialog from './dialog/infoDialog.js';
+import ConfirmDialog from './dialog/confirmDialog.js';
+import InputDialog from './dialog/inputDialog.js';
+import InputScreen from './screen/inputScreen.js';
+
+import ResidentMain from './screen/residentMain';
+import CenterMain from './screen/centerMain';
+import BusinessMain from './screen/businessMain';
+import LoginScreen from './screen/loginScreen';
+import RegisterScreen from './screen/registerScreen';
+import ForumScreen from './screen/forumScreen';
+import UnitSwitchScreen from './screen/unitSwitchScreen';
+import UnitApplicationScreen from './screen/unitApplicationScreen';
+import UnitScreen from './screen/unitScreen';
+import UnitDetailScreen from './screen/unitDetailScreen';
+import UnitCarScreen from './screen/unitCarScreen';
+import UnitCarHistoryScreen from './screen/unitCarHistoryScreen';
+import UnitCommunityScreen from './screen/unitCommunityScreen';
+import UnitCityScreen from './screen/unitCityScreen';
+import UnitBlockScreen from './screen/unitBlockScreen';
+import UnitChooseScreen from './screen/unitChooseScreen';
+import NoticeScreen from './screen/noticeScreen';
+import NoticeDetailScreen from './screen/noticeDetailScreen';
+import LockScreen from './screen/lockScreen';
+import LockHistoryScreen from './screen/lockHistoryScreen';
+import VisitorAccessScreen from './screen/visitorAccessScreen';
+import VisitorCreateScreen from './screen/visitorCreateScreen';
+import AdviceScreen from './screen/adviceScreen';
+import AdviceCreateScreen from './screen/adviceCreateScreen';
+import AdviceDetailScreen from './screen/adviceDetailScreen';
+import TroubleScreen from './screen/troubleScreen';
+import TroubleCreateScreen from './screen/troubleCreateScreen';
+import TroubleDetailScreen from './screen/troubleDetailScreen';
+import ContactScreen from './screen/contactScreen';
+import BillScreen from './screen/billScreen';
+import BillHistoryScreen from './screen/billHistoryScreen';
+import BillDetailScreen from './screen/billDetailScreen';
+import ChangePasswordScreen from './screen/changePasswordScreen';
+import ChangeAccountScreen from './screen/changeAccountScreen';
+import HelpScreen from './screen/helpScreen';
+import AboutScreen from './screen/aboutScreen';
+import UserDetailScreen from './screen/userDetailScreen';
+import TopicDetailScreen from './screen/topicDetailScreen';
+import TopicEditScreen from './screen/topicEditScreen';
+import ReplyScreen from './screen/replyScreen';
+import ReplyEditScreen from './screen/replyEditScreen';
+import ShopDetailScreen from './screen/shopDetailScreen';
+import PromotionDetailScreen from './screen/promotionDetailScreen';
+import GoodsDetailScreen from './screen/goodsDetailScreen';
+import CouponDetailScreen from './screen/couponDetailScreen';
+import CouponScreen from './screen/couponScreen';
+import PhotoScreen from './screen/photoScreen';
+import DeviceScreen from './screen/deviceScreen';
+
+
+// 注册APP所需要用到的页面
+export function registerScreens() {
+    Navigation.registerComponent('MapPane', () => MapPane);//APP上的地图控件，点击打开地图显示
+    Navigation.registerComponent('ImageGallery', () => ImageGallery);//APP上的图片列表控件，点击图片可以打开大图显示
+    Navigation.registerComponent('InfoDialog', () => InfoDialog);//信息提示对话框
+    Navigation.registerComponent('ConfirmDialog', () => ConfirmDialog);//信息确认对话框
+    Navigation.registerComponent('InputDialog', () => InputDialog);//信息输入对话框
+    Navigation.registerComponent('InputScreen', () => InputScreen);//信息输入对话框
+
+    Navigation.registerComponent('ResidentMain', () => ResidentMain);//物业子页面，也是整个APP的首页
+    Navigation.registerComponent('CenterMain', () => CenterMain);//个人中心子页面
+    Navigation.registerComponent('BusinessMain', () => BusinessMain);//*周边商圈子页面
+    Navigation.registerComponent('LoginScreen', () => LoginScreen);//登录界面
+    Navigation.registerComponent('RegisterScreen', () => RegisterScreen);//注册页面
+    Navigation.registerComponent('ForumScreen', () => ForumScreen);//社区论坛子页面
+    Navigation.registerComponent('UnitApplicationScreen', () => UnitApplicationScreen);//房屋申请页面
+    Navigation.registerComponent('UnitSwitchScreen', () => UnitSwitchScreen);//房屋选择及切换
+    Navigation.registerComponent('UnitScreen', () => UnitScreen);//房屋列表
+    Navigation.registerComponent('UnitDetailScreen', () => UnitDetailScreen);//房屋明细页面
+    Navigation.registerComponent('UnitCarScreen', () => UnitCarScreen);//房屋车辆明细页面
+    Navigation.registerComponent('UnitCarHistoryScreen', () => UnitCarHistoryScreen);//房屋出入历史页面
+    Navigation.registerComponent('UnitCityScreen', () => UnitCityScreen);//城市选择页面
+    Navigation.registerComponent('UnitCommunityScreen', () => UnitCommunityScreen);//房屋申请-选择社区
+    Navigation.registerComponent('UnitBlockScreen', () => UnitBlockScreen);//选择楼栋
+    Navigation.registerComponent('UnitChooseScreen', () => UnitChooseScreen);//房屋申请-选择房屋
+    Navigation.registerComponent('NoticeScreen', () => NoticeScreen);//物业公告列表页面
+    Navigation.registerComponent('NoticeDetailScreen', () => NoticeDetailScreen);//物业公告详情页面
+    Navigation.registerComponent('LockScreen', () => LockScreen);//社区门禁，打开门禁清单，直接开门
+    Navigation.registerComponent('LockHistoryScreen', () => LockHistoryScreen);//开门禁历史记录
+    Navigation.registerComponent('VisitorAccessScreen', () => VisitorAccessScreen);//访客通行
+    Navigation.registerComponent('VisitorCreateScreen', () => VisitorCreateScreen);//创建访客密码页面
+    Navigation.registerComponent('AdviceScreen', () => AdviceScreen);//访客通行
+    Navigation.registerComponent('AdviceCreateScreen', () => AdviceCreateScreen);//创建访客密码页面
+    Navigation.registerComponent('AdviceDetailScreen', () => AdviceDetailScreen);//物业公告详情页面
+    Navigation.registerComponent('TroubleScreen', () => TroubleScreen);//维修申报页面
+    Navigation.registerComponent('TroubleCreateScreen', () => TroubleCreateScreen);//创建维修申报页面
+    Navigation.registerComponent('TroubleDetailScreen', () => TroubleDetailScreen);//物业公告详情页面
+    Navigation.registerComponent('ContactScreen', () => ContactScreen);//联系物业
+    Navigation.registerComponent('BillScreen', () => BillScreen);//物业缴费
+    Navigation.registerComponent('BillHistoryScreen', () => BillHistoryScreen);//已经支付账单
+    Navigation.registerComponent('BillDetailScreen', () => BillDetailScreen);//物业账单明细
+    Navigation.registerComponent('ChangePasswordScreen', () => ChangePasswordScreen);//修改密码页面
+    Navigation.registerComponent('ChangeAccountScreen', () => ChangeAccountScreen);//修改账户号
+    Navigation.registerComponent('HelpScreen', () => HelpScreen);//帮助页面
+    Navigation.registerComponent('AboutScreen', () => AboutScreen);//关于我们页面
+    Navigation.registerComponent('UserDetailScreen', () => UserDetailScreen);//修改用户信息页面，上传头像
+    Navigation.registerComponent('TopicDetailScreen', () => TopicDetailScreen);//话题详情页面
+    Navigation.registerComponent('TopicEditScreen', () => TopicEditScreen);//创建访客密码页面
+    Navigation.registerComponent('ReplyEditScreen', () => ReplyEditScreen);//话题回复页面
+    Navigation.registerComponent('ReplyScreen', () => ReplyScreen);//话题详情页面
+    Navigation.registerComponent('ShopDetailScreen', () => ShopDetailScreen);//商铺详情页面
+    Navigation.registerComponent('PromotionDetailScreen', () => PromotionDetailScreen);//物业公告详情页面
+    Navigation.registerComponent('GoodsDetailScreen', () => GoodsDetailScreen);//商铺详情页面
+    Navigation.registerComponent('CouponDetailScreen', () => CouponDetailScreen);//优惠券详情页面
+    Navigation.registerComponent('CouponScreen', () => CouponScreen);//所有优惠券列表页面
+    Navigation.registerComponent('PhotoScreen', () => PhotoScreen);//相框编辑页面
+    Navigation.registerComponent('DeviceScreen', () => DeviceScreen);//设备列表页面
+}

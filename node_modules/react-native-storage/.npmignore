@@ -1,0 +1,6 @@
+.tmp
+.gitignore
+.nvmrc
+webpack*
+__tests__
+jestSupport
