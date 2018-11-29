@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:onClick="openCardData"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/info_manager_card"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <ImageView
+                    android:id="@+id/card_image"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_card"
+                    android:layout_centerVertical="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_toRightOf="@+id/card_image"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门禁卡"/>
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:onClick="openFaceData"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/info_manager_face"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <ImageView
+                    android:id="@+id/face_image"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_face"
+                    android:layout_centerVertical="true"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_toRightOf="@+id/face_image"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人脸识别"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

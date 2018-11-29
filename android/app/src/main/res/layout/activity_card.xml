@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+
+        <TextView
+            android:text="返回"
+            android:onClick="onBackEvent"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<ImageView
+            android:onClick="onBackEvent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />-->
+        <TextView
+            android:id="@+id/title"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!-- <ImageView
+            android:onClick="onAddEvent"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_add"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /> -->
+        <TextView
+            android:text="增加"
+            android:onClick="onAddEvent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="选择房屋："
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:onClick="selectHouse"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/house_name"
+            android:onClick="selectHouse"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:onClick="selectHouse"
+            android:src="@drawable/ic_details"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:text="姓名"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:background="#999999"
+            ></View>
+        <TextView
+            android:text="卡号"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:background="#999999"
+            ></View>
+        <TextView
+            android:text="创建时间"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/mlv"
+        android:scrollbars="none"
+        android:divider="#cccccc"
+        android:dividerHeight="1px"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+    <TextView
+        android:id="@+id/error"
+        android:visibility="visible"
+        android:textSize="20sp"
+        android:textColor="#cccccc"
+        android:gravity="center"
+        android:text="未录入门禁卡"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

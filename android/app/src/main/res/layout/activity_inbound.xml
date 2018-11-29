@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:id="@+id/callingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/guestImage"
+            android:layout_width="320dp"
+            android:layout_height="256dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="30dp"
+            android:src="@drawable/guest" />
+
+        <TextView
+            android:id="@+id/callingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guestImage"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:text="TextView"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/rejectButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="rejectCall"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/reject" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="rejectCall"
+                    android:paddingTop="5dp"
+                    android:text="拒听"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/openDoorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/openDoorButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="openDoor"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lock" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="openDoor"
+                    android:paddingTop="5dp"
+                    android:text="开门"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/acceptVoiceButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="acceptCallVoice"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/acceptvoice" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="acceptCallVoice"
+                    android:paddingTop="5dp"
+                    android:text="音频对讲"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/acceptVideoButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="acceptCall"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/accept" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="acceptCall"
+                    android:paddingTop="5dp"
+                    android:text="可视对讲"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/speakingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/videoLayout"
+            android:layout_width="320dp"
+            android:layout_height="418dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="30dp">
+
+            <LinearLayout
+                android:id="@+id/remoteLayout"
+                android:layout_width="320dp"
+                android:layout_height="418dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/localLayout"
+                android:layout_width="64dp"
+                android:layout_height="84dp"
+                android:background="#000000"
+                android:orientation="horizontal" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/voiceImage"
+            android:layout_width="320dp"
+            android:layout_height="256dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="30dp"
+            android:src="@drawable/guest" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="switchMic"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mic" />
+
+                <TextView
+                    android:id="@+id/switchMicText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="switchMic"
+                    android:paddingTop="5dp"
+                    android:text="免提"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/openButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="rejectCall"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/reject" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="rejectCall"
+                    android:paddingTop="5dp"
+                    android:text="挂断"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/openDoorAndCloseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/closeButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="openDoor"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lock" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="openDoor"
+                    android:paddingTop="5dp"
+                    android:text="开门"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

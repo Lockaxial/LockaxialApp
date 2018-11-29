@@ -1,0 +1,38 @@
+一、如何导入iOS SDK
+获取最新版SDK的压缩包并解压，sdk下包含inc和lib两个文件夹，
+其中inc文件夹下包含3个头文件sdkerrorcode.h，sdkkey.h，sdkobj.h及一个mknetwork文件夹，lib文件夹下包含一个库文件libtyrtcsdk.a。
+第一步：将sdk 文件夹合并到本地工程文件下。
+第二步：在Xcode中右键点击工程根目录，选择Add Files to，选择指向sdk文件夹的路径，点击OK，头文件即导入成功。
+第三步：左键点击工程根目录，在Build Phases中选择Link Binary With Libraries，添加libtyrtcsdk.a文件，库文件即导入成功。
+第四步：参照demo工程添加动态库和框架（Build Phases—Link Binary With Library）。
+Deployment Target选择7.0及以上的开发者，请将libstdc++.dylib替换为libstdc++6.0.9.dylib。
+第五步：参照demo工程，配置plist文件中的Required background modes。	
+
+二、如何替换新的iOS SDK
+请将新版本的SDK覆盖旧版本即可，请避免将工程的Header Search Paths和Library Search Paths指向多个SDK路径，容易发生冲突。
+
+三、如何解决编译报错的问题
+请确保在真机上运行，若报错“undefined symbols ... in tyrtcsdk.a”，此类问题大多由找不到sdk路径导致。
+
+四、关于log
+请开发者们在集成调试过程中务必开启log打印，以便于在出现问题时把log发给我们，从而快速定位问题。
+开启log打印方法：
+在- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+方法中调用initCWDebugLog();
+请在正式发布时注释掉此语句。
+查看log方法：
+可通过iFunBox软件进行日志查看，软件在天翼RTC开发者支持群里可以下载，
+日志路径为：应用文件夹->tmp->cwlog.txt
+
+五、关于DEMO
+demo只用于演示接口的调用方法，部分代码不适合简单拷贝，例如获取token的操作等。
+demo中有大量详细注释，说明了接口使用方法及注意事项，请开发者务必认真阅读。
+请开发者们阅读接口说明文档，注意接口参数的含义，开发时请根据应用需求进行参数构造，不要直接拷贝demo源码，以免造成不必要的错误。
+实例工程分为TYRTC_DEMO和TYRTC_天翼VV两个。TYRTC_DEMO用于理解sdk接口的使用方法。TYRTC_天翼VV用于理解界面跳转方法。
+
+六、关于文档
+参考文档包括“开发者必读”（即此文档）、“开发手册”（即接口说明文档）、“开发FAQ”（即常见问题说明）。
+
+七、如何向我们反馈问题
+请开发者们首先加入“天翼RTC开发者支持”QQ群（群号172898609）。
+在阅读过DEMO代码、FAQ文档、接口文档后，若仍存在问题，请在群里首先详细描述问题现象、操作步骤，我们的技术人员会随时为您解答！
