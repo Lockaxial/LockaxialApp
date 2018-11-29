@@ -87,6 +87,8 @@
 		9D884B8F273043F0BC33BA1A /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58005119AA524487BB3A8114 /* Zocial.ttf */; };
 		B2AECF3713064D71BE2A27E0 /* libimageCropPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77868CD90A5F4C19BD4A54EB /* libimageCropPicker.a */; };
 		C29E43A99F47416695B805AC /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED0341B80543C2B412D477 /* Octicons.ttf */; };
+		D4EBF9A421AFB22700E35104 /* jpush-ios-3.0.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EBF98921AFB22700E35104 /* jpush-ios-3.0.5.a */; };
+		D4EBF9A621B035A000E35104 /* libjcore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EBF9A521B035A000E35104 /* libjcore-ios.a */; };
 		E9123EC594934358BDA3A64E /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2138D9E65FE140028A9C048A /* libRNI18n.a */; };
 		E93F9CE364064C9B877C77D2 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDC86240C6C49FCB1AD1686 /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
@@ -395,6 +397,8 @@
 		CB9CE300DC5B4ACC9F420A35 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		CEDC86240C6C49FCB1AD1686 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		D4CBA7B021AF0D110097A348 /* ReactNativeControllers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeControllers.xcodeproj; path = "../node_modules/react-native-controllers/ios/ReactNativeControllers.xcodeproj"; sourceTree = "<group>"; };
+		D4EBF98921AFB22700E35104 /* jpush-ios-3.0.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "jpush-ios-3.0.5.a"; path = "../node_modules/jpush-react-native/ios/RCTJPushModule/RCTJPushModule/jpush-ios-3.0.5.a"; sourceTree = "<group>"; };
+		D4EBF9A521B035A000E35104 /* libjcore-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjcore-ios.a"; path = "../node_modules/jcore-react-native/ios/RCTJCoreModule/libjcore-ios.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +406,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EBF9A621B035A000E35104 /* libjcore-ios.a in Frameworks */,
+				D4EBF9A421AFB22700E35104 /* jpush-ios-3.0.5.a in Frameworks */,
 				57EEA41F1E6829D8008E8194 /* JavaScriptCore.framework in Frameworks */,
 				57E2B1AB1E5BEF2A0024A5D5 /* MessageUI.framework in Frameworks */,
 				57EEA41D1E6829B7008E8194 /* libicucore.tbd in Frameworks */,
@@ -624,6 +630,8 @@
 		574E50601E519B960064A67F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4EBF9A521B035A000E35104 /* libjcore-ios.a */,
+				D4EBF98921AFB22700E35104 /* jpush-ios-3.0.5.a */,
 				57EEA41E1E6829D8008E8194 /* JavaScriptCore.framework */,
 				57EEA41C1E6829B7008E8194 /* libicucore.tbd */,
 				57E2B1B61E5BEFF00024A5D5 /* VideoToolbox.framework */,
@@ -1304,6 +1312,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tyrtcsdk/lib",
+					"$(PROJECT_DIR)/../node_modules/jpush-react-native/ios/RCTJPushModule/RCTJPushModule/",
+					"$(PROJECT_DIR)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
 				);
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1412,6 +1422,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tyrtcsdk/lib",
+					"$(PROJECT_DIR)/../node_modules/jpush-react-native/ios/RCTJPushModule/RCTJPushModule/",
+					"$(PROJECT_DIR)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1519,6 +1531,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tyrtcsdk/lib",
+					"$(PROJECT_DIR)/../node_modules/jpush-react-native/ios/RCTJPushModule/RCTJPushModule/",
+					"$(PROJECT_DIR)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
 				);
 				OTHER_LDFLAGS = (
 					"-framework",
